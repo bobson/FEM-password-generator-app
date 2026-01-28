@@ -1,0 +1,133 @@
+/* For WebKit browsers (Chrome, Safari, Edge) */
+.length-slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 0.5rem;
+    background-color: var(--grey-850);
+    border: none;
+}
+
+/* For Firefox */
+.length-slider::-moz-range-track {
+    width: 100%;
+    height: 0.5rem;
+    background: var(--grey-850);
+    border: none;
+}
+
+.length-slider {
+    --percentage: 0%;
+    appearance: none;
+    background: linear-gradient(to right,
+            var(--green-200) 0%,
+            var(--green-200) var(--percentage),
+            var(--grey-900) var(--percentage),
+            var(--grey-900) 100%);
+    width: 100%;
+    height: 0.5rem;
+    outline: none;
+
+    &::-webkit-slider-runnable-track {
+        -webkit-appearance: none;
+        background: transparent;
+        border: none;
+        height: 8px;
+    }
+
+    &::-moz-range-track {
+        background: transparent;
+        border: none;
+        height: 8px;
+    }
+}
+
+.length-header {
+    display: flex;
+    justify-content: space-between;
+    margin-block-end: 0.5rem;
+}
+
+.length-header__title {
+    user-select: none;
+}
+
+.length-header__value {
+    font-size: var(--font-size-r);
+    line-height: var(--line-height-r);
+    color: var(--green-200);
+    user-select: none;
+
+    @media (width > 768px) {
+        font-size: var(--font-size-xl);
+        line-height: var(--font-size-xl);
+    }
+}
+
+/* For WebKit browsers (Chrome, Safari, Edge) */
+.length-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 28px;
+    height: 28px;
+    background: var(--grey-200);
+    /* White when not dragging */
+    border: 2px solid var(--grey-200);
+    /* White border */
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -10px;
+    transition: all 0.1s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Hover state - dark with green border */
+.length-slider::-webkit-slider-thumb:hover {
+    background: var(--grey-900);
+    /* Dark on hover */
+    border-color: var(--green-200);
+    /* Green border on hover */
+    box-shadow: 0 0 0 4px hsla(var(--green-200-hsl), 0.5);
+}
+
+/* Active/Dragging state - dark with green border */
+.length-slider:active::-webkit-slider-thumb,
+.length-slider.dragging::-webkit-slider-thumb {
+    background: var(--grey-900);
+    /* Dark when dragging */
+    border-color: var(--green-200);
+    /* Green border when dragging */
+    box-shadow: 0 0 0 4px hsla(var(--green-200-hsl), 0.5);
+}
+
+/* For Firefox */
+.length-slider::-moz-range-thumb {
+    width: 28px;
+    height: 28px;
+    background: var(--grey-200);
+    /* White when not dragging */
+    border: 2px solid var(--grey-200);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Firefox hover */
+.length-slider::-moz-range-thumb:hover {
+    background: var(--grey-900);
+    /* Dark on hover */
+    border-color: var(--green-200);
+    /* Green border on hover */
+    box-shadow: 0 0 0 4px hsla(var(--green-200-hsl), 0.5);
+}
+
+/* Firefox active/dragging */
+.length-slider:active::-moz-range-thumb,
+.length-slider.dragging::-moz-range-thumb {
+    background: var(--grey-900);
+    /* Dark when dragging */
+    border-color: var(--green-200);
+    /* Green border when dragging */
+    box-shadow: 0 0 0 4px hsla(var(--green-200-hsl), 0.5);
+}

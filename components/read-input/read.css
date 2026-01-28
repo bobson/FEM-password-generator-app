@@ -1,0 +1,62 @@
+.password-output {
+    display: flex;
+    padding: 1rem;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+
+    @media (width> 768px) {
+        padding-inline: 2rem;
+    }
+}
+
+
+.password-input {
+    background: transparent;
+    border: none;
+    font-size: var(--font-size-l);
+    color: var(--white);
+    cursor: default;
+    width: 100%;
+
+    &:focus-visible {
+        border: none;
+        outline: none;
+        caret-color: transparent;
+        color: var(--white);
+    }
+
+    @media (width > 768px) {
+        font-size: var(--font-size-xl);
+        line-height: var(--font-size-xl);
+    }
+}
+
+.copy-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    justify-self: flex-end;
+    all: unset;
+}
+
+.copy-message {
+    color: var(--green-200);
+    animation: fadeIn 0.2s ease;
+    position: absolute;
+    right: 2.5rem;
+
+    @media (width > 768px) {
+        right: 3.75rem;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

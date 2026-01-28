@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" type="module" defer></script>
+
+    <title>Frontend Mentor | Password generator app</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+
+      <read-input class="password-output">
+        <input
+          type="text"
+          id="generated-password"
+          readonly
+          value=""
+          aria-label="Generated password"
+          placeholder="P4$5W0rD!"
+          class="password-input"
+        />
+        <button class="copy-btn" aria-label="Copy password">
+          <img src="./assets/images/icon-copy.svg" alt="" />
+        </button>
+      </read-input>
+      <main>
+        <slider-input class="length-control">
+          <div class="length-header">
+            <label for="password-length" class="length-header__title"
+              >Character Length</label
+            >
+            <output id="length-value" class="length-header__value">0</output>
+          </div>
+          <input
+            type="range"
+            id="password-length"
+            name="length"
+            min="4"
+            max="16"
+            value="0"
+            step="1"
+            aria-label="length-label"
+            class="length-slider"
+          />
+        </slider-input>
+
+        <checkbox-inputs class="password-options">
+          <label class="option">
+            <input type="checkbox" name="uppercase" checked class="sr-only" />
+            <span class="custom-checkbox"></span>
+            <span class="option-label">Include Uppercase Letters</span>
+          </label>
+
+          <label class="option">
+            <input type="checkbox" name="lowercase" checked class="sr-only" />
+            <span class="custom-checkbox"></span>
+            <span class="option-label">Include Lowercase Letters</span>
+          </label>
+
+          <label class="option">
+            <input type="checkbox" name="numbers" checked class="sr-only" />
+            <span class="custom-checkbox"></span>
+            <span class="option-label">Include Numbers</span>
+          </label>
+
+          <label class="option">
+            <input type="checkbox" name="symbols" class="sr-only" />
+            <span class="custom-checkbox"></span>
+            <span class="option-label">Include Symbols</span>
+          </label>
+        </checkbox-inputs>
+
+        <action-contols class="actions">
+          <div class="strength-container">
+            <output>STRENGTH</output>
+            <span class="strength-label"></span>
+            <ul role="list">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+
+          <button class="generate-pass">
+            GENERATE
+            <img src="./assets/images/icon-arrow-right.svg" alt="right arrow" />
+          </button>
+        </action-contols>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,166 @@
+@layer reset {
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
+    html {
+        -moz-text-size-adjust: none;
+        -webkit-text-size-adjust: none;
+        text-size-adjust: none;
+    }
+
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    figure,
+    blockquote,
+    dl,
+    dd {
+        margin: 0;
+    }
+
+    /* https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html */
+    [role="list"] {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        min-block-size: 100vh;
+        line-height: 1.6;
+    }
+
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        text-wrap: balance;
+    }
+
+    p,
+    li {
+        text-wrap: pretty;
+    }
+
+    img,
+    picture {
+        max-inline-size: 100%;
+        display: block;
+    }
+
+    input,
+    button,
+    textarea,
+    select {
+        font: inherit;
+    }
+}
+
+@layer base {
+    :root {
+        /* Base Colors */
+        --white: hsl(0, 100%, 100%);
+        --black: hsl(0, 0%, 0%);
+
+        /* Grey Scale */
+        --grey-950: hsl(255, 22%, 4%);
+        --grey-900: hsl(248, 17%, 9%);
+        --grey-850: hsl(248, 15%, 11%);
+        --grey-800: hsl(248, 10%, 15%);
+        --grey-700: hsl(248, 5%, 34%);
+        --grey-600: hsl(251, 9%, 53%);
+        --grey-200: hsl(252, 11%, 91%);
+
+        /* Accent Colors */
+        --green-200: hsl(127, 100%, 82%);
+        --yellow-300: hsl(42, 91%, 68%);
+        --orange-400: hsl(13, 95%, 66%);
+        --red-500: hsl(0, 91%, 63%);
+
+
+        /* Gradients */
+        --gradient-1: linear-gradient(to right,
+                hsl(248, 17%, 9%),
+                hsl(255, 22%, 4%));
+
+        --font-size-xl: 2rem;
+        --font-size-l: 1.5rem;
+        --font-size-r: 1.125rem;
+        --font-size-s: 1rem;
+
+        --line-height-xl: 2.625rem;
+        --line-height-l: 2rem;
+        --line-height-r: 1.5rem;
+        --line-height-s: 1.25rem;
+    }
+
+    @font-face {
+        font-family: "JetBrains Mono";
+        src: url("/assets/fonts/static/JetBrainsMono-Bold.ttf");
+        font-weight: bold;
+        font-display: swap;
+        font-style: normal;
+    }
+
+    body {
+        /* Smooth scaling from 32px to 104px between 300px and 1600px */
+        padding: clamp(1rem, 5vw, 6.5rem);
+        background-color: var(--grey-900);
+        color: var(--grey-200);
+        font-family: "JetBrains Mono", monospace;
+        font-size: var(--font-size-s);
+        line-height: var(--line-height-s);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        color: var(--grey-600);
+        font-size: var(--font-size-s);
+        line-height: var(--line-height-s);
+        text-align: center;
+    }
+}
+
+
+.container {
+    display: grid;
+    gap: 1rem;
+    /* max-width: 33.75rem; */
+}
+
+main,
+.password-output {
+    background-color: var(--grey-800);
+    padding: 1rem;
+    display: grid;
+    gap: 2rem;
+}
+
+@media (width > 768px) {
+    body {
+        font-size: var(--font-size-r);
+        line-height: var(--line-height-r);
+    }
+
+    main {
+        padding: 2rem;
+    }
+
+    h1 {
+        font-size: var(--font-size-r);
+        line-height: var(--line-height-r);
+    }
+
+
+}
