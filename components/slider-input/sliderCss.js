@@ -1,3 +1,5 @@
+export const sliderCss = `
+
 /* For WebKit browsers (Chrome, Safari, Edge) */
 .length-slider::-webkit-slider-runnable-track {
     width: 100%;
@@ -131,3 +133,5 @@
     /* Green border when dragging */
     box-shadow: 0 0 0 4px hsla(var(--green-200-hsl), 0.5);
 }
+
+`;

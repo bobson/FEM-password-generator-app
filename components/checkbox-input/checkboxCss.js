@@ -1,3 +1,4 @@
+export const checkboxCss = `
 .password-options {
     border: none;
     padding: 0;
@@ -52,21 +53,10 @@
     border-color: var(--green-200);
 }
 
-/* .option input:checked+.custom-checkbox::after {
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 6px;
-    width: 5px;
-    height: 10px;
-    border: solid var(--grey-900);
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-} */
 
 /* Disabled state */
 .option input:disabled+.custom-checkbox {
     border-color: var(--grey-600);
     opacity: 0.5;
     cursor: not-allowed;
-}
+}`;

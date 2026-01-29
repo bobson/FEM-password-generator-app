@@ -1,4 +1,4 @@
-// import { generatePassword } from "../../store";
+import { checkboxCss } from "./checkboxCss.js";
 
 export default class CheckboxInputs extends HTMLElement {
   #checkboxes;
@@ -10,13 +10,15 @@ export default class CheckboxInputs extends HTMLElement {
     const styles = document.createElement("style");
     this.appendChild(styles);
 
-    async function loadCss() {
-      const res = await fetch("../../components/checkbox-input/checkbox.css");
-      const css = await res.text();
-      styles.textContent = css;
-    }
+    styles.textContent = checkboxCss;
 
-    loadCss();
+    // async function loadCss() {
+    //   const res = await fetch("../../components/checkbox-input/checkbox.css");
+    //   const css = await res.text();
+    //   styles.textContent = css;
+    // }
+
+    // loadCss();
   }
 
   connectedCallback() {

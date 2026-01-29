@@ -1,3 +1,4 @@
+export const css = `
 .actions {
     display: grid;
     grid-template-rows: 3.5rem 3.5rem;
@@ -82,3 +83,4 @@
         }
     }
 }
+`;

@@ -1,3 +1,4 @@
+export const readCss = `
 .password-output {
     display: flex;
     padding: 1rem;
@@ -60,3 +61,4 @@
         opacity: 1;
     }
 }
+`;

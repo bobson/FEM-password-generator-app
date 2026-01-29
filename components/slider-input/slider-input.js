@@ -1,3 +1,5 @@
+import { sliderCss } from "./sliderCss.js";
+
 export default class SliderInput extends HTMLElement {
   #slider;
 
@@ -9,13 +11,14 @@ export default class SliderInput extends HTMLElement {
     `;
     const styles = document.createElement("style");
     this.appendChild(styles);
+    styles.textContent = sliderCss;
 
-    async function loadCss() {
-      const req = await fetch("../../components/slider-input/slider.css");
-      const css = await req.text();
-      styles.textContent = css;
-    }
-    loadCss();
+    // async function loadCss() {
+    //   const req = await fetch("../../components/slider-input/slider.css");
+    //   const css = await req.text();
+    //   styles.textContent = css;
+    // }
+    // loadCss();
   }
 
   get output() {

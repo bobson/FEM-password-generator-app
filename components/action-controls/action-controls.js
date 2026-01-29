@@ -1,3 +1,5 @@
+import { css } from "./actionsCss.js";
+
 export default class ActionContols extends HTMLElement {
   #generateBtn;
 
@@ -8,14 +10,7 @@ export default class ActionContols extends HTMLElement {
 
     const styles = document.createElement("style");
     this.appendChild(styles);
-
-    async function loadCss() {
-      const res = await fetch("./actions.css");
-      const css = await res.text();
-      styles.textContent = css;
-    }
-
-    loadCss();
+    styles.textContent = css;
   }
 
   connectedCallback() {
