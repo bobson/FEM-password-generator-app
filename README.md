@@ -29,6 +29,7 @@ Users should be able to:
 ### Screenshot
 
 ![]("./password-generator-app-des.png)
+![]("./password-generator-app-mob.png)
 
 ### Links
 
