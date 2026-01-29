@@ -12,9 +12,7 @@ This is a solution to the [Password generator app challenge on Frontend Mentor](
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -30,12 +28,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![]("./password-generator-app-des.png)
+![]("./password-generator-app-mob.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/bobson/FEM-password-generator-app.git)
+- Live Site URL: [live site URL here](https://bobson.github.io/FEM-password-generator-app/)
 
 ## My process
 
@@ -53,37 +52,60 @@ Users should be able to:
 Web Components Architecture
 
 Created modular, reusable components with encapsulated behavior:
-Slider component for length selection with visual feedback
-Checkbox group for character type selection
-Read-only input with copy-to-clipboard
-Strength indicator with dynamic styling
+
+    Slider component for length selection with visual feedback
+
+    Checkbox group for character type selection
+
+    Read-only input with copy-to-clipboard
+
+    Strength indicator with dynamic styling
 
 State Management
-Centralized store using Proxy for reactive updates
-Custom events (passwordchange) for component communication
-Components subscribe to store changes automatically
-Single source of truth for generation criteria
+
+    Centralized store using Proxy for reactive updates
+
+    Custom events (passwordchange) for component communication
+
+    Components subscribe to store changes automatically
+
+    Single source of truth for generation criteria
 
 User Experience
-Real-time password generation as users adjust settings
-Visual strength indicator (red → orange → green)
-Copy-to-clipboard with immediate confirmation
-Accessible notifications without blocking UI
-Proper disabled button states
+
+    Real-time password generation as users adjust settings
+
+    Visual strength indicator (red → orange → green)
+
+    Copy-to-clipboard with immediate confirmation
+
+    Accessible notifications without blocking UI
+
+    Proper disabled button states
 
 Technical Implementation
-Shadow DOM for style encapsulation
-CSS custom properties for dynamic styling
-Event delegation for efficient handling
-Progressive enhancement approach
-Clean logic/presentation separation
+
+    Shadow DOM for style encapsulation
+
+    CSS custom properties for dynamic styling
+
+    Event delegation for efficient handling
+
+    Progressive enhancement approach
+
+    Clean logic/presentation separation
 
 Key Takeaways
-Web Components excel at self-contained UI
-Custom events enable component communication
-Proxy-based stores provide simple reactivity
-Visual feedback is crucial for interactivity
-Accessibility should be baked in from start
+
+    Web Components excel at self-contained UI
+
+    Custom events enable component communication
+
+    Proxy-based stores provide simple reactivity
+
+    Visual feedback is crucial for interactivity
+
+    Accessibility should be baked in from start
 
 Demonstrates modern interactive applications with vanilla web technologies, no frameworks needed.
 

@@ -10,7 +10,7 @@ export default class ActionContols extends HTMLElement {
     this.appendChild(styles);
 
     async function loadCss() {
-      const res = await fetch("/components/action-controls/actions.css");
+      const res = await fetch("../../components/action-controls/actions.css");
       const css = await res.text();
       styles.textContent = css;
     }

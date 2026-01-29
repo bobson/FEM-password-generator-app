@@ -10,7 +10,7 @@ export default class ReadInput extends HTMLElement {
     this.appendChild(styles);
 
     async function loadCss() {
-      const res = await fetch("/components/read-input/read.css");
+      const res = await fetch("../../components/read-input/read.css");
       const css = await res.text();
       styles.textContent = css;
     }

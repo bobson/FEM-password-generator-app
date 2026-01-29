@@ -11,7 +11,7 @@ export default class SliderInput extends HTMLElement {
     this.appendChild(styles);
 
     async function loadCss() {
-      const req = await fetch("/components/slider-input/slider.css");
+      const req = await fetch("../../components/slider-input/slider.css");
       const css = await req.text();
       styles.textContent = css;
     }

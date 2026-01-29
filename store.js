@@ -75,8 +75,6 @@ function getPasswordStrength(password) {
 function getStrengthLabel(score) {
   const labels = ["TOO WEAK!", "WEAK", "MEDIUM", "STRONG"];
   Store.strengthLabel = labels[score] || "";
-  console.log(score);
-  console.log(Store.strengthLabel);
 }
 
 const proxiedStore = new Proxy(Store, {

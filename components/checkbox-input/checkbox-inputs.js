@@ -11,7 +11,7 @@ export default class CheckboxInputs extends HTMLElement {
     this.appendChild(styles);
 
     async function loadCss() {
-      const res = await fetch("/components/checkbox-input/checkbox.css");
+      const res = await fetch("../../components/checkbox-input/checkbox.css");
       const css = await res.text();
       styles.textContent = css;
     }
